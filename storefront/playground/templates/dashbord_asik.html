@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table</title>
+</head>
+<body>
+
+<h2>Data Table</h2>
+
+<table border="1">
+    <tr>
+        <th>Temparature</th>
+        <th>HR_And_SPo2</th>
+        <th>EGG</th>
+        <th>Time</th>
+    </tr>
+    {% for row in data_from_database_experiment %}
+    <tr>
+        <td>{{ row.Temparature }}</td>
+        <td>{{ row.HR_And_SPo2 }}</td>
+        <td>{{ row.EGG }}</td>
+        <td>{{ row.Time }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+        <td colspan="3">No data available</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+
+

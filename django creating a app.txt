@@ -1,0 +1,96 @@
+pip install pipenv
+cd desktop
+mkdir storefront
+cd storefront
+pipenv install django
+
+
+Virtualenv location: C:\Users\Tushar\.virtualenvs\storefront-ApbQL1xz
+
+
+
+
+
+
+
+
+dir
+code .
+
+pipenv shell
+django-admin
+startproject storfront
+django-admin startproject storefront . // for starting a new project 
+python manage.py
+
+
+virtualenv environmentname    // creating a new environment
+environmentname\Scripts\activate // activating a environment
+python manage.py runserver  // For starting The Server
+
+CTRL + C           // For Stoping The Server
+
+CTRL + p           // for searching in in vs code
+
+pipenv --venv      // in cmd for seeing environment saving path  (in vs code in search bar enter    >python interpreter  for selecting interpreter) 
+
+python manage.py startapp playground     // for creating an  app
+Use exit() or Ctrl-Z plus Return to exit      // from python (in cmd) to go back to cmd 
+
+
+
+//////////////////////////////////////Django Rest FrameWork ///////////////////////////////////////////
+pip install djangorestframework
+pip install markdown       # Markdown support for the browsable API.
+pip install django-filter  # Filtering support
+
+
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+]
+
+
+/////////////////////////////////////////////////////////////////// my sql ///////////////////////
+pip install mysqlclient
+
+
+DATABASES = {                                                   // in settings.py
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'my_database',  
+        'USER': 'root',  
+        'PASSWORD': 'your_password',  
+        'HOST': '127.0.0.1',  
+        'PORT': '3306',  
+        'OPTIONS': {  
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
+        }  
+    }  
+} 
+
+
+
+
+python manage.py makemigrations              // for creating database tables as per models       (makemigrations,migrate)
+python manage.py migrate
+
+///////////////////////////////////////////////////////////////////for crating a super user for admin panel///////////////////////////////////////////////////
+python manage.py createsuperuser                 // user name : 'tushar'  password :123
+///////////////////////////////////////////////////////////////////////django-crispy-forms //////////////////////////////////////////
+pip install django-crispy-forms
+pip install crispy-bootstrap5
+
+
+
+INSTALLED_APPS = [
+       # ...
+       'crispy_forms',
+       'crispy_bootstrap5', 
+       # ...
+]
+
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
